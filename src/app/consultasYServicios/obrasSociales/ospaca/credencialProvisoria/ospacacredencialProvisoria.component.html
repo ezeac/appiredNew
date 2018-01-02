@@ -1,0 +1,71 @@
+<div id="contCredencialProvisoria">
+	<div class="textoInfoServicio">Usted ha elegido:</div>
+	<div class="tituloServicio">{{titulo}}</div>
+
+	<div class="formCredencialProvisoria" *ngIf="datos.length == 0">
+		<form #formTramite="ngForm" (ngSubmit)="onSubmitCredencial(formTramite)" method="POST">
+			<div class="itemForm">
+				<label for="dni">DOCUMENTO:</label><br>
+				<input type="text" name="dni" #thisDni="ngModel" [(ngModel)]="dni" required pattern="[0-9]+">
+				<span *ngIf="thisDni.touched && !thisDni.valid">Formato de DNI incorrecto</span>
+			</div>
+			<div class="itemForm">		
+				<label for="fechaNacimiento">FECHA DE NACIMIENTO:</label><br>
+				<input type="text" name="fechaNacimiento" #thisFechaNacimiento="ngModel" [(ngModel)]="fechaNacimiento" required pattern="\d\d/\d\d/\d\d\d\d">
+				<span *ngIf="thisFechaNacimiento.touched && !thisFechaNacimiento.valid">La fecha de nacimiento debe tener el forato dd/mm/aaaa</span>
+			</div>
+			<re-captcha (resolved)="resolved($event)" siteKey="6Lcp_TcUAAAAALQRYHXbjmiGVFAfWNNnK8XCPb6T"></re-captcha>
+
+			<input class="inputButtonAzul" type="submit" value="Generar">
+		</form>
+	</div>
+
+	<div id="contenedorOuterPrintComprobante" *ngIf="datos.length != 0">
+		<div id="comprobanteFinal" class="comprobanteFinal">
+			<div class="contenedorComprobante" id="contenedorComprobante">
+
+				<div class="tituloComprobante">
+					<div class="imagenLogosComprobante"><img src="assets/img/logoAppi2.svg" alt=""></div>
+					<div class="imagenLogosComprobante"><img src="assets/img/os/ospaca/logoOspaca.png" alt=""></div>
+					<div class="imagenLogosComprobante" id="poligonos"><img src="assets/img/marcaDeAgua.jpg" alt=""></div>
+					<div class="textoDatosComprobante" id="datosComprobanteSuperior"><b>URGENCIAS:</b><br>Mendoza TE 0810-6663637 / San Rafael TE 081-6667375 <br> San Juan TE 0264-4204343 / San Luis TE 0810-1222364</div>
+				</div>
+				<div class="subtituloComprobante">
+					<div class="subtituloComprobante2">
+						CREDENCIAL PROVISORIA VÍA WEB
+					</div>
+				</div>
+				<div class="contenidoComprobante">
+
+					<div class="separadorColumnasComprobante">
+						<div class="datosExportadosComprobante"><b>APELLIDO Y NOMBRE: </b><div id="nombreComp">{{datos[0].innerHTML}}</div></div>
+						<div class="datosExportadosComprobante"><b>FECHA DE NACIMIENTO: </b><div id="fechaComp">{{datos[1].innerHTML}}</div></div>
+						<div class="datosExportadosComprobante"><b>DNI: </b><div id="dniComp">{{datos[4].innerHTML}}</div></div>
+						<div class="datosExportadosComprobante"><b>TIPO DE AFILIADO: </b><div id="tipoAfiliado">{{datos[18].innerHTML}}</div></div>
+						<div class="datosExportadosComprobante" id="contenedorPlanCobertura"><b>PLAN DE COBERTURA: </b><div id="planCobertura">{{datos[10].innerHTML}}</div></div>
+						<div class="textoDatosComprobante">El provisorio deberá presentarse conjuntamente con último recibo de sueldo y DNI o los últimos 3 pagos de monotributo según corresponda. En el caso de pertenecer el carnet a un familiar, los datos de la empresa corresponden al afiliado titular.</div>
+						<div class="footerComprobante"><b>EMITIDO: </b><h2 id="fechaEmision">{{datos[6].innerHTML}}</h2><b>  </b><b> VENCIMIENTO: </b><div id="fechaVtoComp">{{datos[7].innerHTML}}</div></div>
+					</div>
+
+					<div class="separadorColumnasComprobante">
+						<div class="datosExportadosComprobante">CENTROS DE ATENCIÓN</div>
+						<div class="datosComprobanteSucursales"><b>MENDOZA </b><br><b>CFTM SRL (Mendoza Capital): </b>Ejercito de los Andes 1696 Dorrego Guaymallen. <b>Tel: </b>0261-4327870/64/65 <br><b>Seres Salud (Coberturas Especiales): </b>Espejo N151 - Ciudad. <b>Tel-fax: </b>0261-4239354 / 0800 666 7373 <br> <b>Ser Salud (Mendoza Interior): </b>Montevideo 765 PB. <b>Tel: </b>0810-6667375 / 0261-4253883</div>
+						<div class="datosComprobanteSucursales"><b>SAN LUIS </b><br><b>Appi Red: </b>Pedernera 384. <b>Tel: </b>0266-4421623</div>
+						<div class="datosComprobanteSucursales"><b>SAN JUAN </b><br><b>Amisa: </b>25 de Mayo esquina Rioja. <b>Tel: </b>0264-4273404/06 (Sanatorio Sarmiento)<br><b>Amisa: </b>Avenida Libertador 945 Este. <b>Tel: </b>0264-4275990</div>
+						<div class="firmasComprobante">
+							<div class="firmaComprobante"><img src="assets/img/firmaDanielGutierrez.png" alt=""> </div>
+							<div class="firmaNombreComprobante" style="display:none"><b>DANIEL GUTIERREZ</b><br>(AFILIACIONES APPI RED)</div>
+						</div>
+						<div class="textoFooter2Comprobante">Superintendencia de Servicios de Salud - Órgano de Control<br>0200-222-SALUD (72583) - www.sssalud.gov.ar</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="botonesDoc">
+			<button class="botonVolver" (click)="datos = []"><span class="glyphicon glyphicon-menu-left"></span> Volver</button>
+			<div class="botonImprimir" (click)="imprimir()" style="cursor:pointer;">Imprimir</div>
+		</div>
+	</div>
+</div>
+<!-- <div *ngIf="datos.length == 0">Cargando credencial, aguarde un momento por favor...</div> -->

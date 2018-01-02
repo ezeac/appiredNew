@@ -1,0 +1,828 @@
+img {
+  width: 100%;
+}
+
+div {
+    font-family: "Montserrat-Light";
+}
+
+b {
+    font-family: "Montserrat-Bold";
+    font-weight: inherit;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.imgBoxShadow {
+    box-shadow: 20px 20px 100px -30px black, -80px 60px 0px #d2e1f0;
+}
+
+.claseLinkActivo {
+    color: #4B5055 !important;
+    transition: all 0.5s;
+}
+
+path, svg {
+    transition: all .3s;
+}
+
+footer {
+    background: #0073CD;
+    color: white;
+}
+
+footer #logoAppi path {
+    fill: white;
+}
+
+
+.itemMenu {
+    float: left;
+    margin-right: 5.44vw;
+}
+
+.menuHeader .pull-left {
+    margin-left: 2vw;
+    margin-top: 8.5px;
+}
+
+.menuHeader .pull-right {
+    margin-right: 2.4vw;
+    margin-top: 41.5px;
+}
+
+header {
+    height: 100px;
+    position: fixed !important;
+    top: 0px;
+    background: white;
+    z-index: 9;
+    left: 0px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.itemMenu a {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    transition: all .3s;
+}
+
+.titulo1 {
+    font-family: Montserrat-Bold;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.contTitulo {
+    width: 630px;
+    float: left;
+    margin-left: 8vw;
+    color: white;
+    margin-top: 160px;
+}
+
+#home1 .texto1 {
+    margin-top: 40px;
+}
+
+.contTitulo .boton1 {
+    margin-top: 38px;
+}
+
+.boton1 {
+    font-family: "Montserrat-Regular";
+    font-size: 11.7px;
+    padding: 17px 30px;
+    float: left;
+    clear: right;
+    border: none;
+    background: white;
+}
+
+.botonVolver {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: Montserrat-Regular;
+    color: #0073CD;
+}
+
+div#home1 {
+    height: 628px;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.titulo2 {
+    font-size: 35px;
+    color: #1D6AAF;
+}
+
+#titulo2v2 {
+    text-align: center;
+    margin-top: 107px;
+}
+
+#sliderHome {
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 130px;
+    height: 150px;
+}
+
+#fotoHome3 {
+    padding-left: 4.16%;
+}
+
+#tituloHome3 {
+    margin-top: 50px;
+}
+
+.texto2 {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.link1 {
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.sliderOff {
+    color: black !important;
+}
+
+.sliderOffContacto {
+    color: black !important;
+}
+
+#home3 .texto2 {
+    margin-top: 30px;
+}
+
+#textoHome3 {
+    padding-right: 4.16%;
+    padding-bottom: 35px;
+}
+
+.link1 {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    color: #1D6AAF;
+}
+
+#home3 {
+    position: relative;
+    display: flex;
+    padding-bottom: 190px;
+    background: #F0F5FA;
+    padding-top: 140px;
+}
+
+#home4 .titulo2 {
+    margin-top: 100px;
+    margin-bottom: 65px;
+}
+
+#home3 .link1 {
+    position: absolute;
+    bottom: 0px;
+}
+
+#home4Cont {
+    display: flex;
+    min-height: 475px;
+    padding-bottom: 100px;
+}
+
+#home4 {
+    padding-left: 4.16%;
+    padding-right: 4.16%;
+}
+
+#logoAppi {
+    margin-top: 20px;
+}
+
+#logoAppi svg {
+    width: 22%;
+}
+
+.textoFooter2 {
+    font-family: Montserrat-Light;
+    font-size: 13px;
+}
+
+.textoFooter1 {
+    font-family: Montserrat-Light;
+    font-size: 15px;
+}
+
+.textoFooter3 {
+    font-family: Montserrat-Light;
+    font-size: 13px;
+    text-align: right;
+}
+
+#imagenSlider1 {
+    background: url("./img/home/slider/slider1.jpg");
+}
+
+#imagenSlider2 {
+    background: url("./img/home/slider/slider2.jpg");
+}
+
+#imagenSlider3 {
+    background: url("./img/home/slider/slider3.jpg");
+}
+
+#footerCont2 {
+    display: flex;
+    position: relative;
+    margin-top: 110px;
+}
+
+#footerCont2 > div {
+    bottom: 30px;
+    position: absolute;
+    left: 30px;
+}
+
+#footerCont2 > div:last-child {
+    right: 20px !important;
+    left: inherit;
+}
+
+#footerCont1 > div:last-child {
+    margin-top: 50px;
+}
+
+#footerCont1 > div:last-child > div:first-child {
+    margin-left: 6%;
+}
+
+.imagenSlider {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    background-size: cover !important;
+}
+
+.sliderItem {
+    height: 100%;
+    background-size: 90% !important;
+    background-position: center !important;
+}
+
+.sliderContainer {
+    height: 100%;
+}
+
+#sliderHome > div {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.prev,.next {
+    top: 50%;
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    transform: translate(0%,-50%);
+    font-size: 18px;
+}
+
+#tituloQuienesSomos1 {
+    color: #4B5055;
+    margin-bottom: 50px;
+}
+
+div#quienesSomos1 {
+    padding: 100px 4.16% 150px 4.16%;
+    background: #F0F5FA;
+}
+
+.tituloQuienesSomosSlide {
+    font-size: 29px;
+    float: left;
+    padding: 0px 30px;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+
+.tituloQuienesSomosSlide:last-child {
+    border: none;
+}
+
+#titulosQuienesSomos {
+    margin-bottom: 45px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+#titulosQuienesSomos > div {
+    width: 465px;
+    margin: 0 auto;
+}
+
+#quienesSomos2 {
+    background: #0073CD;
+    color: white;
+    padding: 100px 0px 85px 0px;
+}
+
+#quienesSomos2 .boton1 {
+    margin-left: 50%;
+    transform: translate(-50%,0%);
+    margin-top: 130px;
+}
+
+div#serviciosLateral {
+    background: #4B5055;
+    color: white;
+    min-height: 600px;
+    max-width: 500px;
+    position: relative;
+}
+
+div#infoTextTitServicios {
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 65px;
+}
+
+#serviciosLateral label {
+    font-size: 10px;
+    font-family: Montserrat-Light;
+    padding-bottom: 10px;
+}
+
+#serviciosLateral select {
+    font-family: Montserrat-Light;
+    font-size: 12px;
+    height: 37px;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    letter-spacing: 0.08em;
+}
+
+.numeracionSelect {
+    content: "";
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    width: 8%;
+    color: white;
+    font-family: Montserrat-Light;
+    font-size: 26px;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+.selectorItem {
+    position: relative;
+    padding-left: 11%;
+    margin-bottom: 35px;
+    width: 77%;
+    margin: 0 auto 40px auto;
+}
+
+#serviciosLateral select:last-child {
+    margin-bottom: 5px;
+}
+
+.borderSelect {
+    margin-left: -6%;
+    padding-left: 7%;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.textoMensajeDefault {
+    position: absolute;
+    top: 40%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 22px;
+    text-align: center;
+    color: rgba(75, 80, 85, 0.7);
+}
+
+.contenedorResultadoTramite {
+    min-height: 600px;
+    position: relative;
+    background: #ECEEF4;
+}
+
+#resultadoTramite {
+    flex: auto;
+    padding: 0px;
+}
+
+consultasyservicios {
+}
+
+div#consutlasYServicios {
+    width: 100%;
+    display: flex;
+}
+
+#serviciosLateral select:focus {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#encontrarPrestadores {
+    height: 600px;
+    width: 100%;
+    float: left;
+}
+
+
+.textoInfoServicio {
+    font-size: 15px;
+    margin-top: 85px;
+}
+
+.tituloServicio {
+    font-size: 35px;
+    font-family: Montserrat-Medium;
+    color: #0073CD;
+    margin-bottom: 55px;
+}
+
+.formCredencialProvisoria label {
+    font-size: 13px;
+    font-family: Montserrat-Light;
+}
+
+.inputButtonAzul {
+    font-size: 13px;
+    font-family: Montserrat-Regular;
+    background: #0073CD;
+    border: none;
+    padding: 17px 48px;
+    color: white;
+    text-transform: uppercase;
+    float: left;
+    clear: both;
+    margin-top: 80px;
+}
+
+.itemForm {
+    float: left;
+    margin-right: 3.25%;
+    width: 32%;
+}
+
+.itemForm input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.formCredencialProvisoria re-captcha {
+    float: left;
+    clear: both;
+    margin-top: 45px;
+}
+
+#contCredencialProvisoria {
+    margin-left: 9.2%;
+    float: left;
+    width: 90%;
+}
+
+.botonesDoc .botonImprimir {
+    float: right;
+    width: auto !important;
+    font-family: Montserrat-Regular;
+    font-size: 13px;
+    text-transform: uppercase;
+    background: #0073cd;
+    color: white;
+    padding: 18px 50px;
+    margin-top: -13px;
+    margin-bottom: 65px;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+    margin-right: 10%;
+}
+
+.botonesDoc {
+    margin-top: -50px;
+}
+
+.botonVolver span {
+    padding: 4px 4px 3px 4px;
+    border: 2px solid;
+    border-radius: 50px;
+    text-align: center;
+    margin-right: 5px;
+    transform: translate(0%,5%);
+}
+
+#contDescargarPlantilla {
+    margin-left: 9.2%;
+    width: 90.4%;
+    float: left;
+}
+
+.itemDescarga input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    border: none;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    background: rgba(75, 80, 85, 0.4);
+    cursor: pointer;
+    transform: translate(0%,27%);
+    margin-right: 10px;
+    position: relative;
+}
+
+.itemDescarga input[type=checkbox]:checked:before {
+    content: "\2714";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    color: white;
+    background: #0073CD;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 15%;
+    font-family: Montserrat-Regular;
+    padding-left: 5%;
+}
+
+.itemDescarga input[type=checkbox]:disabled {
+    background: rgba(75, 80, 85, 0.2);
+    z-index: 1;
+    cursor: not-allowed;
+}
+
+.itemDescarga {
+    margin-top: 25px;
+}
+
+#selectMendoza {
+    cursor: pointer;
+    background: none;
+    z-index: 2;
+    margin-left: -8px;
+    border: none;
+}
+
+.boton1 a {
+    color: #0073cd;
+}
+
+.itemDescarga input[type=checkbox][value="OK"]:hover:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    content: '\20D7';
+    line-height: 49px;
+    font-family: Montserrat-Bold;
+    font-size: 40px;
+    color: rgba(0, 0, 0, .6);
+    cursor: auto;
+}
+
+header svg:hover {
+    opacity: .75;
+    transition: all .2s;
+    /* filter: drop-shadow(0px 0px 1px rgba(0,0,0,.7)); */
+}
+
+#contContacto {
+    display: flex;
+    min-height: 620px;
+}
+
+.itemSliderContacto {
+    float: left;
+    padding: 9px 15px;
+    border-right: 2px solid hsla(0, 0%, 0%, 0.3);
+    color: black;
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.itemSliderContacto:last-child {
+    border: none;
+}
+
+.titContactenos {
+    font-size: 23px;
+    margin-bottom: 35px;
+    color: white;
+    padding-left: 15px;
+}
+
+#formContactoStandard form {
+    float: left;
+    width: 100%;
+}
+
+#formContactoStandard {padding: 0px;}
+
+#formContactoStandard .inputButtonAzul {
+    float: left;
+    clear: both;
+    margin-top: 35px;
+    margin-bottom: 115px;
+    margin-left: 15px;
+}
+
+#formContactoStandard input[type=text], #formContactoStandard textarea {
+    width: 100%;
+    font-size: 11px;
+    font-family: Montserrat-Light;
+    padding-left: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+}
+
+#formContactoStandard textarea {
+    height: 82%;
+    bottom: 0px;
+}
+
+#formContactoStandard > div {
+    display: flex;
+}
+
+#formContactoStandard form > div {
+    display: flex;
+    padding: 0px;
+}
+
+#formContactoStandard input[type=text] {
+    margin-bottom: 20px;
+    height: 37px;
+}
+
+#formContactoStandard label {
+    font-family: Montserrat-Regular;
+    font-size: 10px;
+    color: white;
+}
+
+#contContacto > .col-sm-7 {
+    background: #4B5055;
+    padding-left: 5%;
+}
+
+form span {
+    color: white;
+}
+
+#mapaSucursales .separadorSede div {
+    color: white;
+}
+
+#mapaSucursales .texto3 {
+    font-size: 12px;
+    padding-left: 2%;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+}
+
+#mapaSucursales .link1 {
+    margin-top: 15px;
+}
+
+#mapaSucursales .separadorSede:last-child .texto3 {
+    border: none;
+}
+
+#mapaSucursales .separadorSede {
+    float: left;
+    clear: both;
+    min-width: 300px;
+}
+
+div#mapaSucursales {
+    float: left;
+    margin-top: -10px;
+}
+
+.contactoItemActive {
+    color: white;
+}
+
+.itemSliderContacto:hover {
+    color: white;
+}
+
+.slideItemContacto {
+    float: left;
+    width: 85%;
+    position: relative;
+}
+
+#contSelectContacto {
+    width: 515px;
+    margin: 0 auto;
+    float: none;
+}
+
+#quieroAsociarme textarea {
+    height: auto;
+    height: 30px;
+}
+
+
+form span {
+    font-size: 10px;
+    position: absolute;
+    transform: translate(-2%,-130%);
+    width: 85%;
+    text-align: right;
+    border-top: 1px solid rgba(255, 0, 0, 0.7);
+    margin-left: 4%;
+}
+
+.contenedorResultadoTramite span {
+    position: relative;
+    border: none;
+    margin: 0px;
+    color: red;
+    font-size: 11px;
+}
+
+.botonVolver span {
+    color: inherit !important;
+    transform: translate(0%,0%);
+}
+
+.textoFooter3 a:hover {
+    border-bottom: 1px solid white;
+}
+
+.separadorSede {
+    margin-bottom: 15px;
+}
+
+.separadorSede .link1 {
+    margin-bottom: 10px;
+}
+
+.separadorSede .texto3 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #0071ce;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemMenu a:hover {
+    color: #4B5055 !important;
+}
+
+.boton1:hover a {
+    color: #4B5055 !important;
+    transition: all .3s;
+}
+
+.textoItemQuienesSomos {
+    line-height: 28px;
+}
+
+header {
+}
+
+#fotoQuienesSomos1 img {
+}
+
+.menuHeader .pull-left svg {}
+
+.menuHeader .pull-left svg {
+    width: 150px;
+}
+
+#contContacto .col-sm-5 {
+    padding: 0px;
+}

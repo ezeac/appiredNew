@@ -1,0 +1,150 @@
+<div id="contContacto">
+	<div class="col-sm-5">
+		<agm-map  [latitude]="lat" [longitude]="lon" [zoom]="13" [styles]=mapStyles style="height: 100%">
+			<agm-marker *ngFor="let m of sedes; let i = index" [iconUrl]="'../../assets/img/mapIcon.png'" [latitude]="m.lat" [longitude]="m.lon"></agm-marker>
+		</agm-map>
+	</div>
+	<div class="col-sm-7">
+		<div class="col-xs-12 staggerAnimation" id="contSelectContacto">
+			<div class="itemSliderContacto contactoItemActive" id="botonContacto" (click)="mostrarItemContacto($event, 'contacto')">CONTACTO</div>
+			<div class="itemSliderContacto" id="botonMapaDeSucursales" (click)="mostrarItemContacto($event, 'mapaSucursales')">MAPA DE SUCURSALES</div>
+			<div class="itemSliderContacto" id="botoneQuieroAsociarme" (click)="mostrarItemContacto($event, 'quieroAsociarme')">QUIERO ASOCIARME</div>
+		</div>
+		<div class="slideItemContacto staggerAnimation" id="contacto" style="display: block;">
+			<div class="col-xs-12" class="titContactenos">Contáctenos</div>
+			<div class="col-xs-12" id="formContactoStandard">
+				<form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
+					<div class="col-xs-12">
+						<div class="col-sm-6">
+							<label for="nombre">NOMBRE Y APELLIDO</label><br>
+							<input type="text" name="nombre" #nombre1="ngModel" [(ngModel)]="nombreForm" required pattern="[a-zA-Z\s]+" placeholder="Ingrese su nombre y apellido">
+							<span class="w3-animate-opacity" *ngIf="nombre1.dirty && nombre1.touched && !nombre1.valid">Formato de nombre incorrecto</span><br>
+
+							<label for="dni">DNI</label><br>
+							<input type="text" name="dni" #dni1="ngModel" [(ngModel)]="dniForm" required pattern="[0-9]+" placeholder="Ingrese su dni">
+							<span class="w3-animate-opacity" *ngIf="dni1.dirty && dni1.touched && !dni1.valid">Formato de dni incorrecto</span><br>
+
+							<label for="email">E-MAIL</label><br>
+							<input type="text" name="email" #email1="ngModel" [(ngModel)]="emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Ingrese su e-mail">
+							<span class="w3-animate-opacity" *ngIf="email1.dirty && email1.touched && !email1.valid">Formato de email incorrecto</span><br>
+						</div>
+						<div class="col-sm-6">
+							<label for="mensaje">MENSAJE</label><br>
+							<textarea name="mensaje" #mensaje1="ngModel" [(ngModel)]="mensajeForm" placeholder="Escriba su consulta"></textarea>
+							<span class="w3-animate-opacity" *ngIf="mensaje1.dirty && mensaje1.touched && !mensaje1.valid">Formato de email incorrecto</span><br>
+						</div>
+					</div>
+					<input type="submit" value="ENVIAR" class="inputButtonAzul">
+				</form>
+			</div>
+		</div>
+		<div class="slideItemContacto staggerAnimation" id="mapaSucursales" style="display: none;">
+			<div class="separadorSede">
+				<div class="link1" (click)="slideDown($event, 'cordoba')">&rsaquo; CASA CENTRAL APPI CÓRDOBA</div>
+				<div class="texto3">
+					9 de Julio 2059<br>
+					Tel. / Fax: (0351) 487 0782 / (0351) 4313094<br>
+					<br>
+					Appi atención al beneficiario Córdoba:<br>
+					<br>
+					0810-888-0707<br>
+					Tel. / Fax: (0351) 4806005 / 4876762
+				</div>
+			</div>
+			<div class="separadorSede">
+				<div class="link1" (click)="slideDown($event, 'bsas')">&rsaquo; APPI BUENOS AIRES</div>
+				<div class="texto3">
+					Beruti 2524 CABA<br>
+					Tel.: (011) 4823-3852/ (011) 4824-4184<br>
+					Fax: (011) 4823-6077 / 0810-444-0066
+				</div>
+			</div>
+			<div class="separadorSede">
+	            <div class="link1" (click)="slideDown($event, 'tucuman')">&rsaquo; APPI TUCUMÁN</div>
+	            <div class="texto3">
+					Batalla de Maipú 668<br>
+					Tel. / Fax: (0381) 4976397 / (0381) 4978287
+				</div>
+			</div>
+			<div class="separadorSede">
+	            <div class="link1" (click)="slideDown($event, 'mendoza')">&rsaquo; APPI MENDOZA</div>
+	            <div class="texto3">
+					CFTM SRL (Mendoza Capital): Ejercito de los Andes 1696 Dorrego Guaymallen. <br>
+					Tel: 0261-4327870/64/65 <br>
+					Seres Salud (Coberturas Especiales): Espejo N151 - Ciudad. <br>
+					Tel-fax: 0261-4239354 / 0800 666 7373 <br>
+					Ser Salud (Mendoza Interior): Montevideo 765 PB. <br>
+					Tel: 0810-6667375 / 0261-4253883 
+				</div>
+			</div>
+			<div class="separadorSede">
+	            <div class="link1" (click)="slideDown($event, 'sanLuis')">&rsaquo; APPI SAN LUIS</div>
+	            <div class="texto3">
+					Appi Red: Pedernera 384.<br>
+					Tel: 0266-4421623
+				</div>
+			</div>
+			<div class="separadorSede">
+	            <div class="link1" (click)="slideDown($event, 'sanJuan')">&rsaquo; APPI SAN JUAN</div>
+	            <div class="texto3">
+					Amisa: 25 de Mayo esquina Rioja.<br>
+					Tel: 0264-4273404/06 (Sanatorio Sarmiento)<br>
+					Amisa: Avenida Libertador 945 Este.<br>
+					Tel: 0264-4275990
+				</div>
+			</div>
+		</div>
+		<div class="slideItemContacto staggerAnimation"  id="quieroAsociarme" style="display: none;">
+			<div class="col-xs-12" class="titContactenos">Solicite un promotor</div>
+			<div class="col-xs-12" id="formContactoStandard">
+				<form #formQuieroAsociarme="ngForm" (ngSubmit)="onSubmit(formQuieroAsociarme)">
+					<div class="col-xs-12">
+						<div class="col-sm-6">
+							<label for="nombre">NOMBRE</label><br>
+							<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="nombreForm" required pattern="[a-zA-Z]+" placeholder="Ingrese su nombre">
+							<span class="w3-animate-opacity" *ngIf="nombre.dirty && nombre.touched && !nombre.valid">Formato de nombre incorrecto</span><br>
+
+							<label for="apellido">APELLIDO</label><br>
+							<input type="text" name="apellido" #apellido="ngModel" [(ngModel)]="apellidoForm" required pattern="[a-zA-Z]+" placeholder="Ingrese su apellido">
+							<span class="w3-animate-opacity" *ngIf="apellido.dirty && apellido.touched && !apellido.valid">Formato de apellido incorrecto</span><br>
+
+							<label for="dni">CUIL O DNI</label><br>
+							<input type="text" name="dni" #dni="ngModel" [(ngModel)]="dniForm" required pattern="[0-9]+" placeholder="Ingrese su dni">
+							<span class="w3-animate-opacity" *ngIf="dni.dirty && dni.touched && !dni.valid">Formato de dni incorrecto</span><br>
+
+							<label for="direccion">DIRECCIÓN</label><br>
+							<input type="text" name="direccion" #direccion="ngModel" [(ngModel)]="direccionForm" required pattern="[\s\S]+" placeholder="Ingrese su direccion">
+							<span class="w3-animate-opacity" *ngIf="direccion.dirty && direccion.touched && !direccion.valid">Formato de direccion incorrecto</span><br>
+
+							<label for="localidad">LOCALIDAD</label><br>
+							<input type="text" name="localidad" #localidad="ngModel" [(ngModel)]="localidadForm" required pattern="[\s\S]+" placeholder="Ingrese su localidad">
+							<span class="w3-animate-opacity" *ngIf="localidad.dirty && localidad.touched && !localidad.valid">Formato de localidad incorrecto</span><br>							
+						</div>
+						<div class="col-sm-6">
+							<label for="fechaNacimiento">FECHA DE NACIMIENTO</label><br>
+							<input type="text" name="fechaNacimiento" #fechaNacimiento="ngModel" [(ngModel)]="fechaNacimientoForm" required pattern="[\s\S]+" placeholder="Ingrese su fechaNacimiento">
+							<span class="w3-animate-opacity" *ngIf="fechaNacimiento.dirty && fechaNacimiento.touched && !fechaNacimiento.valid">Formato de fechaNacimiento incorrecto</span><br>
+
+							<label for="email">E-MAIL</label><br>
+							<input type="text" name="email" #email="ngModel" [(ngModel)]="emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Ingrese su e-mail">
+							<span class="w3-animate-opacity" *ngIf="email.dirty && email.touched && !email.valid">Formato de email incorrecto</span><br>
+
+							<label for="telefono">TELÉFONO</label><br>
+							<input type="text" name="telefono" #telefono="ngModel" [(ngModel)]="telefonoForm" required pattern="" placeholder="Ingrese su e-mail">
+							<span class="w3-animate-opacity" *ngIf="telefono.dirty && telefono.touched && !telefono.valid"></span><br>
+							
+							<label for="provincia">PROVINCIA</label><br>
+							<input type="text" name="provincia" #provincia="ngModel" [(ngModel)]="provinciaForm" required pattern="" placeholder="Ingrese su e-mail">
+							<span class="w3-animate-opacity" *ngIf="provincia.dirty && provincia.touched && !provincia.valid"></span><br>
+							
+							<label for="mensaje">MENSAJE?</label><br>
+							<textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="mensajeForm" placeholder="Escriba su consulta"></textarea>
+							<span class="w3-animate-opacity" *ngIf="mensaje.dirty && mensaje.touched && !mensaje.valid"></span><br>
+						</div>
+					</div>
+					<input type="submit" value="ENVIAR" class="inputButtonAzul">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

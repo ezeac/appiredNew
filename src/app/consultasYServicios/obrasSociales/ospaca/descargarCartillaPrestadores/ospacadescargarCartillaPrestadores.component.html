@@ -1,0 +1,24 @@
+<div id="contDescargarPlantilla">
+	<div class="textoInfoServicio">Usted ha elegido:</div>
+	<div class="tituloServicio">{{titulo}}</div>
+	<div class="" id="contFormDescargarPlantilla">
+		<form action="" id="formDescargarPlantilla">
+			<div class="itemDescarga">
+				<input type="checkbox" id="checkMendoza" name="mendozaOK" value="OK" (click)="abrirSelect($event, 'selectMendoza')">
+				<select name="mendoza1" id="selectMendoza" (click)="resetForm('mendoza')">
+					<option value="" default>Mendoza (seleccionar)</option>
+					<option name="mendoza" value="../../../../../assets/documents/ospaca/CartillaMendozaCapital.pdf">Mendoza Capital</option>
+					<option name="mendoza" value="../../../../../assets/documents/ospaca/CartillaMendozaInterior.pdf">Mendoza Interior</option>
+				</select>
+			</div>
+			<div class="itemDescarga">
+				<input (click)="resetForm('sanJuan')" id="sanJuan" type="checkbox" name="SanJuan" value="../../../../../assets/documents/ospaca/CartillaSanJuan.pdf">San Juan
+			</div>
+			<div class="itemDescarga">
+				<input (click)="resetForm('sanLuis')" id="sanLuis" type="checkbox" name="SanLuis" value="../../../../../assets/documents/ospaca/CartillaSanLuis.pdf">San Luis
+			</div>
+
+			<input class="inputButtonAzul" type="submit" value="Descargar" (click)="descargarPlantilla()">
+		</form>
+	</div>
+</div>

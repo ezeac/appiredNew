@@ -1,3 +1,36 @@
-<h1>
-  {{title}}
-</h1>
+<header class="col-xs-12">
+	<nav class="menuHeader row">
+		<div class="pull-left">
+			<div class=""><a (click)="subirScroll()" [routerLink]="['/home']" [routerLinkActive]="['claseLinkActivo']"><div class="logoAppi logoAppiNormal">Cargando imagen...</div></a></div>
+		</div>
+		<div class="pull-right">
+			<div class="itemMenu"><a (click)="subirScroll()" [routerLink]="['/quienesSomos']" [routerLinkActive]="['claseLinkActivo']">QUIÉNES SOMOS</a></div>
+			<div class="itemMenu"><a (click)="subirScroll()" [routerLink]="['/consultasYServicios']" [routerLinkActive]="['claseLinkActivo']">CONSULTAS Y SERVICIOS</a></div>
+			<div class="itemMenu"><a (click)="subirScroll()" [routerLink]="['/contacto']" [routerLinkActive]="['claseLinkActivo']">CONTACTO</a></div>
+		</div>
+	</nav>
+</header>
+<div id="separadorHeader" style="width: 100%; margin-top: 100px"></div>
+
+<router-outlet></router-outlet>	
+
+<footer class="col-xs-12">
+	<div class="col-xs-12" id="footerCont1">
+		<div class="pull-left col-sm-6"><div class="logoAppi" id="logoAppi">Cargando...</div></div>
+		<div class="pull-right col-sm-6">
+			<div class="pull-right textoFooter1">TÉRMINOS Y CONDICIONES</div>
+			<div class="pull-right textoFooter1">POLÍTICA DE PRIVACIDAD</div>
+		</div>
+	</div>
+	<div class="col-xs-12" id="footerCont2">
+		<div class="pull-left col-sm-6">
+			<div class="textoFooter2">CASA CENTRAL APPI CÓRODBA</div>
+			<div class="textoFooter2">9 de Julio 2059</div>
+			<div class="textoFooter2">Tel. / Fax: (0351) 4870782 / (0351) 4313094</div>
+		</div>
+		<div class="pull-right col-sm-6">
+			<div class="textoFooter3">Desarrollado por <a href="www.diezweb.com.ar" style="text-decoration: none; color:white">DiezWeb</a></div>
+			<div class="textoFooter3">© Todos los derechos reservados</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,61 @@
+<div id="consutlasYServicios">
+	<div class="col-sm-4 staggerAnimation" id="serviciosLateral">
+		<div id="infoTextTitServicios">Consultas y Servicios</div>
+		<div class="selectorItem" id="selectorOS">
+			<div class="numeracionSelect">1</div>
+
+			<div class="borderSelect">
+				<label for="os">SELECCIONE SU OBRA SOCIAL</label><br>
+				<select name="os" (change)="cargarTramite($event.target.value)">
+					<option disabled selected value> -- Selecciona Obra Social -- </option>
+					<option *ngFor="let item of obraSocial; let i = index" value="{{item[0]}}">{{item[1]}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="selectorItem" id="selectorTramite">
+			<div class="numeracionSelect">2</div>
+
+			<div class="borderSelect">
+				<label for="tramite">SELECCIONE LA CONSULTA O SERVICIO</label><br>
+				<select *ngIf="tramite.length != 0" name="tramite" (change)="cargarDetalle($event.target.value)">
+					<option disabled selected value> -- Selecciona Trámite -- </option>
+					<option *ngFor="let item of tramite; let i = index" value="{{item[0]}}">{{item[1]}}</option>
+				</select>
+
+				<select *ngIf="tramite.length == 0" name="tramite">
+					<option disabled selected value> -- Selecciona Obra Social -- </option>
+				</select>
+			</div>
+		</div>
+		<div *ngIf="detalleTramite" class="selectorItem" id="detalleTramite">
+			<div class="numeracionSelect">3</div>
+
+			<div class="borderSelect">
+				<label for="detalleTramite">{{tituloDetalleTramite}}</label><br>
+				<div *ngIf="detalleTexto['encontrarPrestadores']">
+					<select [(ngModel)]="Provincia" id="selectProvincia" name="provincia" (change)="Localidad = false; Rubro = false; actualizarSeleccionEncontrarPrestadores(i)">
+						<option value="idProvincia1">Provincia1</option>
+						<option value="idProvincia2">Provincia2</option>
+					</select>
+					<select [(ngModel)]="Localidad" id="selectLocalidad" name="localidad" (change)="Rubro = false; actualizarSeleccionEncontrarPrestadores(i)">
+						<option value="idLocalidad1">Localidad1</option>
+						<option value="idLocalidad2">Localidad2</option>
+					</select>
+					<select [(ngModel)]="Rubro" id="selectRubro" name="rubro" (change)="actualizarSeleccionEncontrarPrestadores(i)">
+						<option value="idRubro1">Rubro1</option>
+						<option value="idRubro2">Rubro2</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-8 staggerAnimation" id="resultadoTramite">
+		<div class="contenedorResultadoTramite">
+			<div class="mensajeDefault" *ngIf="vistaResultado == ''"><div class="textoMensajeDefault">No se ha ingresado ningún&nbsp;campo.</div></div>
+			<div class="mensajeDefault" *ngIf="vistaResultado == 'completar'"><div class="textoMensajeDefault">Complete los campos faltantes.</div></div>
+			<ospacadescargarCartillaPrestadores *ngIf="vistaResultado == 'ospacadescargarCartillaPrestadores'">Cargando...</ospacadescargarCartillaPrestadores>
+			<ospacacredencialProvisoria *ngIf="vistaResultado == 'ospacacredencialProvisoria'">Cargando...</ospacacredencialProvisoria>
+			<ospacaencontrarPrestadores [ObraSocial]='obraSocial' [Provincia]='Provincia' [Localidad]='Localidad' [Rubro]='Rubro' *ngIf="vistaResultado == 'ospacaencontrarPrestadores'">Cargando...</ospacaencontrarPrestadores>
+		</div>
+	</div>
+</div>

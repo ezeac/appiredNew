@@ -1,0 +1,311 @@
+.imagenLogosComprobante {
+    width: 200px;
+    height: 100px;
+}
+
+.comprobanteFinal div {
+    float: left;
+}
+
+.firmaComprobante {
+    width: 100px;
+    height: auto;
+}
+
+.tituloComprobante {
+    width: 100%;
+}
+
+#datosComprobante {
+    display: none;
+}
+
+.contenedorCredencial {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 0px 30px;
+}
+
+.subtituloComprobante {
+    width: 100%;
+}
+
+.subtituloComprobante2 {
+    width: 45%;
+    text-align: left;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.contenidoComprobante {
+    width: 100%;
+}
+
+.separadorColumnasComprobante {
+    width: 45%;
+    padding: 15px 0px;
+    padding-right: 30px;
+}
+
+.separadorColumnasComprobante:last-child {
+    width: 55%;
+    padding-right: 0px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.datosExportadosComprobante {
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.textoDatosComprobante {
+    text-align: left;
+    font-size: 14px !important;
+    margin: 20px 0px;
+}
+
+.firmaNombreComprobante {
+    margin-left: 20px;
+    font-size: 12px !important;
+}
+
+.footerComprobante {
+    position: absolute;
+    font-size: 12px !important;
+    bottom: 30px;
+    left: 30px;
+}
+
+.footerComprobante b {
+    font-size: 12px !important;
+}
+
+div#fechaVto {
+    font-size: 12px;
+    float: left;
+}
+
+.datosComprobanteSucursales {
+    margin-bottom: 10px;
+}
+
+.comprobanteFinal {
+    width: 1000px;
+    height: 600px;
+    background: url("");
+}
+
+.imagenLogosComprobante {
+    margin-right: 60px;
+    width: 180px !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.contenidoComprobante b {
+    float: left;
+}
+
+.imagenLogosComprobante {
+    width: 200px;
+    height: 100px;
+}
+
+.comprobanteFinal div {
+    float: left;
+    font-family: openSans;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+.firmaComprobante {
+    width: 200px;
+    height: 110px;
+    margin-top: -20px;
+}
+
+.tituloComprobante {
+    width: 100%;
+}
+
+#datosComprobante {
+    display: none;
+}
+
+.contenedorCredencial {
+}
+
+.subtituloComprobante {
+    width: 100%;
+}
+
+.subtituloComprobante2 {
+    width: 45%;
+    text-align: left;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    padding: 5px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+}
+
+.contenidoComprobante {
+    width: 100%;
+}
+
+.separadorColumnasComprobante {
+    width: 45%;
+    padding: 15px 0px;
+    padding-right: 30px;
+}
+
+.separadorColumnasComprobante:last-child {
+    width: 55%;
+    padding-right: 0px;
+    padding-left: 30px;
+    text-align: left;
+    margin-top: -36px;
+}
+
+.datosExportadosComprobante {
+    width: 100%;
+    padding: 5px 0px;
+    font-size: 14px;
+}
+
+.textoDatosComprobante {
+    text-align: left;
+    font-size: 13px !important;
+    margin: 20px 0px;
+}
+
+.firmaNombreComprobante {
+    margin-left: 20px;
+    font-size: 12px !important;
+}
+
+.footerComprobante {
+    font-size: 18px !important;
+    margin-top: 80px;
+}
+
+.footerComprobante b {
+    font-size: 12px !important;
+    font-family: openSansBold;
+}
+
+div#fechaVtoComp, #fechaEmision {
+    float: right;
+    margin-left: 5px;
+    margin-top: -5px !important;
+    font-weight: 400;
+}
+
+.firmasComprobante {
+    margin-top: 0px;
+}
+
+.datosComprobanteSucursales {
+    margin-bottom: 10px;
+    font-size: 13px;
+    width: 100%;
+}
+
+.textoFooter2Comprobante {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.comprobanteFinal {
+    width: 1150px;
+    height: 600px;
+    background: none;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 0px 40px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 41%;
+    -webkit-transform: translate(-50%,-10%) scale(.7);
+    transform: translate(-50%,-10%) scale(.7);
+    margin-left: 50%;
+}
+
+.imagenLogosComprobante {
+    margin-right: 60px;
+    width: 180px !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
+}
+
+.contenidoComprobante b {
+    float: left;
+    font-family: openSansBold;
+}
+
+
+.datosExportadosComprobante div {
+    margin-left: 3px;
+}
+
+.datosComprobanteSucursales b {
+    float: none;
+}
+
+.footerComprobante b {
+    float: left;
+}
+
+#poligonos {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    margin: 0px;
+    padding: 0px;
+    width: 98% !important;
+    height: 98%;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 1;
+}
+
+div#fechaVtoComp {
+    float: right;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+
+.logoObraSocial {
+    width: 200px;
+    transition: all .3s;
+}
+
+.logoObraSocial img {
+    filter: grayscale(100%);
+    transition: all .3s;
+    opacity: .7;
+}
+
+.logoObraSocial:hover img {
+    cursor: pointer;
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+h2#fechaEmision {
+    font-size: inherit;
+    float: left;
+    margin-top: -3px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#datosComprobanteSuperior {
+    float: left;
+    width: 370px;
+    margin-top: 45px;
+}
