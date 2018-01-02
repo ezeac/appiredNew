@@ -10,3 +10,8 @@
 *Instalar agm (angular maps) - npm install @agm/core --save
 *Instalar xml2js - npm install @types/xml2js --save-dev
 *Corregir error "Injection Token" - npm install @types/xml2js --save-dev
+
+
+## Crear bundle para producción (en carpeta dist/)
+
+*ng build --prod
