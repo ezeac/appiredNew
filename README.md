@@ -9,7 +9,7 @@
 *Instalar ng-recaptcha - npm i ng-recaptcha --save
 *Instalar agm (angular maps) - npm install @agm/core --save
 *Instalar xml2js - npm install @types/xml2js --save-dev
-*Corregir error "Injection Token" - npm install @types/xml2js --save-dev
+*Corregir error "Injection Token" - npm install @angular/common@latest @angular/compiler@latest @angular/compiler-cli@latest @angular/core@latest @angular/forms@latest @angular/http@latest @angular/platform-browser@latest @angular/platform-browser-dynamic@latest @angular/platform-server@latest @angular/router@latest @angular/animations@latest typescript@latest --save
 
 
 ## Crear bundle para producción (en carpeta dist/)
